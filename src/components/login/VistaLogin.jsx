@@ -7,10 +7,10 @@ export const VistaLogin = ({ history }) => {
     history.replace('/')
   }
   return (
-    <div className="container mt-5">
-      <h1>Hola, identifícate</h1>
+    <div className="container mt-5 animate__animated animate__fadeIn">
+      <h1>Pulsa en este botón para comenzar</h1>
       <hr />
-      <button className="btn btn-primary" onClick={gestionarLogin}>Identificarse</button>
+      <button className="btn btn-primary" onClick={gestionarLogin}>Acceder</button>
     </div>
   )
 }

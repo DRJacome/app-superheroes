@@ -3,13 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark animate__animated animate__fadeIn">
 
       <Link
         className="navbar-brand"
         to="/"
       >
-        Asociaciones
+        Página principal
       </Link>
 
       <div className="navbar-collapse">
@@ -43,7 +43,7 @@ export const Navbar = () => {
             className="nav-item nav-link"
             to="/login"
           >
-            Logout
+            Salir
           </NavLink>
         </ul>
       </div>

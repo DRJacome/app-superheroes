@@ -3,8 +3,9 @@ import { Navbar } from "../components/ui/NavBar"
 import { Route, Switch, Redirect } from "react-router-dom"
 import { VistaMarvel } from '../components/marvel/VistaMarvel'
 import { VistaHeroe } from '../components/heroes/VistaHeroe'
-import { VistaDC } from '../components/cd/VistaDC'
+import { VistaDC } from '../components/dc/VistaDC'
 import { VistaBusqueda } from '../busqueda/VistaBusqueda'
+import VistaHome from '../components/home/VistaHome'
 
 export const PanelRutas = () => {
   return (
@@ -16,8 +17,9 @@ export const PanelRutas = () => {
           <Route exact path='/heroe/:heroeId' component={VistaHeroe} />
           <Route exact path='/dc' component={VistaDC} />
           <Route exact path='/busqueda' component={VistaBusqueda} />
+          <Route exact path='/home' component={VistaHome} />
 
-          <Redirect to='/marvel' />
+          <Redirect to='/home' />
         </Switch>
       </div>
     </>
