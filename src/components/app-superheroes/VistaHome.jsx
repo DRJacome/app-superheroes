@@ -1,4 +1,4 @@
-const VistaHome = () => {
+export const VistaHome = () => {
   return (
     <div className="container mt-5 animate__animated animate__fadeIn">
       <h1>Hola! Bienvenido a esta pequeña colección</h1>
@@ -7,4 +7,3 @@ const VistaHome = () => {
     </div>
   )
 }
-export default VistaHome

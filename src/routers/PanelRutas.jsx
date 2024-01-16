@@ -5,7 +5,8 @@ import { VistaMarvel } from '../components/marvel/VistaMarvel'
 import { VistaHeroe } from '../components/heroes/VistaHeroe'
 import { VistaDC } from '../components/dc/VistaDC'
 import { VistaBusqueda } from '../busqueda/VistaBusqueda'
-import VistaHome from '../components/home/VistaHome'
+import { VistaHome } from '../components/app-superheroes/VistaHome'
+
 
 export const PanelRutas = () => {
   return (
@@ -17,9 +18,9 @@ export const PanelRutas = () => {
           <Route exact path='/heroe/:heroeId' component={VistaHeroe} />
           <Route exact path='/dc' component={VistaDC} />
           <Route exact path='/busqueda' component={VistaBusqueda} />
-          <Route exact path='/home' component={VistaHome} />
+          <Route exact path='/app-superheroes' component={VistaHome} />
 
-          <Redirect to='/home' />
+          <Redirect to='/app-superheroes' />
         </Switch>
       </div>
     </>
