@@ -8,7 +8,6 @@ export const ListaHeroe = ({ editora }) => {
   /*   const heroes = getHeroesByEditora(editora) */
   const heroes = useMemo(() => getHeroesByEditora(editora), [editora])
 
-
   return (
     <div className='card-columns animate__animated animate__fadeIn'>
       {

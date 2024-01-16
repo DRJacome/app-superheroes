@@ -36,7 +36,7 @@ export const VistaBusqueda = ({ history }) => {
           <form onSubmit={manejarFormulario}>
             <input
               type='text'
-              placeholder='Escriba el nombre de un héroe'
+              placeholder='Escribe el nombre de un héroe'
               className='form-control m-1'
               name='textoBusqueda'
               autoComplete='off'
@@ -61,18 +61,21 @@ export const VistaBusqueda = ({ history }) => {
           } */}
           {
             (q !== '' && filtradoHeroes.length === 0)
-            && (<div className='alert alert-info mt-5'>
-              <p className='text-center pt-2'>No hay ningún superhéroe llamado {q}</p>
+            && (<div className='alert alert-info mt-5 animate__animated animate__fadeInRight'>
+              <p className='text-center pt-2'>No hay ningún superhéroe llamado "{q}". Prueba a buscar otra vez</p>
             </div>)
+          }
+          {
+            (q === '' && filtradoHeroes.length === 0)
+              ? (<h4 className='animate__animated animate__fadeInUp'>Tu búsqueda aparecerá aquí</h4>)
+              : (<h4 className='animate__animated animate__fadeInRight'>Resultado de la búsqueda:</h4>)
           }
           {
             filtradoHeroes.map(
               heroe => (
-                <div key={heroe.id}>
-                  <h4>Resultados:</h4>
+                <div key={heroe.id} className='animate__animated animate__fadeInRight'>
                   <hr />
                   <TarjetaHeroe
-
                     {...heroe}
                   />
                 </div>
